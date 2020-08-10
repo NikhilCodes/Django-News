@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Headlines</h2>
-<hr/>
-
+<div class="container-fluid">
+  <h2>Headlines</h2>
+  <hr/>
+</div>
 {% for article in articleCollection %}
-  <div class="news-article container-fluid py-2">
+  <div onclick="location.href='article/{{ article.id }}'" class="news-article container-fluid py-2">
     <div class="row">
       <div class="col-sm-9 article-text">
         <h2 class="title">{{ article.title }}</h2>

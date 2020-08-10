@@ -19,10 +19,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from pages.views import homepage_view
-
+from article.views import articlepage_view
 
 urlpatterns = [
     path('', homepage_view),
-    #path('article/<int:id>', articlepage_view),
+    path('article/<int:id>', articlepage_view),
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL)

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="px-3"> 
+  <h2 class="display-4">{{ article.title }}</h2>
+  <div class="datetime alert">{{ article.datetime }}</div>
+</div>
+<br/>
+<img class="no-padding" width="100%" src="/{{ article.image }}" />
+
+<div class="px-3 py-5">
+  <blockquote class="display-4 px-3 font-italic text-secondary">
+    <p>"{{ article.subtitle }}"</p>
+  </blockquote>
+  <br/>
+  <div class="body">{{ article.body }}</div><br/><br/>
+  <div class="text-center card-footer">END</div>
+</div>
+{% endblock %}
