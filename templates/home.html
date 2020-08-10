@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Headlines</h2>
+<hr/>
+
+{% for article in articleCollection %}
+  <div class="news-article container-fluid py-2">
+    <div class="row">
+      <div class="col-sm-9 article-text">
+        <h2 class="title">{{ article.title }}</h2>
+        <h3 class="subtitle">{{ article.subtitle }}</h3>
+        <div class="datetime">
+          {{ article.datetime }}
+        </div>
+      </div>
+      <div class="col-sm-1">
+        <img class="article-image" src="{{ article.image }}" />
+      </div>
+    </div>
+  </div>
+  <br/>
+{% endfor %}
+
+{% endblock %}
